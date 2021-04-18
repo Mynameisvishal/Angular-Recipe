@@ -1,1 +1,9 @@
-<p>recipe-item works!</p>
+<a href="#" *ngIf="recipe" class="list-group-item clearfix">
+    <div class="d-flex">
+        <img src="{{recipe.imagePath}}" style="height: 70px;margin-top: 16px !important;" class="img-responsive" alt="{{recipe.name}}">
+        <div class="card-body">
+            <h6 class="card-title">{{recipe.name}}</h6>
+            <p class="card-text">{{recipe.description}}</p>
+        </div>
+    </div> 
+</a>

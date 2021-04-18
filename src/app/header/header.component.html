@@ -1,37 +1,3 @@
-<!-- <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
-            <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
-            </button>
-            <a routerLink="/" class="navbar-brand">Recipe Book</a>
-        </div>
-    <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Recipies</a></li>
-                <li> <a href="#">Shopping List</a> </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" role="button">Manage <span class="caret"></span> </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Save Data</a></li>
-                        <li><a href="#">Fetch Data</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav> -->
-
-<!-- <div class="navbar-header">
-    <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
-      <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
-    </button>
-    <a routerLink="/" class="navbar-brand">Recipe Book</a>
-  </div>
-  <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true"> -->
-
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -42,10 +8,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Recipes</a>
+            <a class="nav-link" (click)="onSelect('recipe')" aria-current="page" href="#">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Shopping List</a>
+            <a class="nav-link" (click)="onSelect('Shopping-list')" href="#">Shopping List</a>
           </li>
           <li class="nav-item dropdown justifycontent-end">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
