@@ -8,9 +8,8 @@ import { Recipe } from './recipe.module';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
-  recipes: Recipe[] = [
-    new Recipe('A Test Recipe', 'This is simply a test','https://unsplash.com/photos/iNwCO9ycBlc')
-  ];
+
+  selectedRecipe?: Recipe;
 
   constructor() { }
 
