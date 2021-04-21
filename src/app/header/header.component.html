@@ -13,14 +13,19 @@
           <li class="nav-item">
             <a class="nav-link" (click)="onSelect('Shopping-list')" href="#">Shopping List</a>
           </li>
-          <li class="nav-item dropdown justifycontent-end">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li class="nav-item dropdown justifycontent-end" appDropdownToggle >
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Manage <span class="caret"></span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Save Data</a></li>
               <li><a class="dropdown-item" href="#">Fetch Data</a></li>
-            </ul>
+            </ul> -->
+            <select class="btn btn-primary outline">
+              <option selected>Manage<span class="caret"></span></option>
+              <option>Save Data</option>
+              <option>Fetch Data</option>
+          </select>
           </li>
         </ul>
        

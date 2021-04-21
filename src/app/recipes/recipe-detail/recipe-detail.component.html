@@ -12,24 +12,21 @@
             <h1>{{recipe.name}}</h1>
         </div>
     </div>
+    
     <div class="row">
         <div class="col-xs-12">
-            <div class="btn-group">
-                <button class="btn btn-primary dropdown-toggle">
-                    Manage Recipe <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Add Recipe</a></li>
-                    <li><a href="#">Edit Recipe</a></li>
-                    <li><a href="#">Delete Recipe</a></li>
-                </ul>
-            </div>
+            <select class="btn btn-primary">
+                <option selected>Manage Recipe <span class="caret"></span></option>
+                <option>Add Recipe</option>
+                <option>Edit Recipe</option>
+                <option>Delete Recipe</option>
+            </select>
         </div>
     </div>
     <div class="row">
-        <div  *ngIf="recipe" class="col-xs-12">
-            {{recipe.description}}
-        </div>
+    <div  *ngIf="recipe" class="col-xs-12">
+        {{recipe.description}}
+    </div>
     </div>
     <div class="row">
         <div class="col-xs-12">
