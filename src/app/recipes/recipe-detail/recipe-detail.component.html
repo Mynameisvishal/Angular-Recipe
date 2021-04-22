@@ -15,11 +15,11 @@
     
     <div class="row">
         <div class="col-xs-12">
-            <select class="btn btn-primary">
-                <option selected>Manage Recipe <span class="caret"></span></option>
-                <option>Add Recipe</option>
-                <option>Edit Recipe</option>
-                <option>Delete Recipe</option>
+            <select (change)="onChange($event)" class="btn btn-primary">
+                <option value="recipe" selected>Manage Recipe <span class="caret"></span></option>
+                <option style="cursor: pointer;" value="To Shopping List">To Shopping List</option>
+                <option value="Edit Recipe">Edit Recipe</option>
+                <option value="Delete Recipe">Delete Recipe</option>
             </select>
         </div>
     </div>
@@ -30,7 +30,15 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            Ingredients
+            <ul class="list-group">
+                <li
+                class="list-group-item"
+                *ngFor="let ingredient of recipe?.ingredients; let i=index"
+                    [ngStyle]="{'float': i % 2 == 0 ? 'right':'left'}" 
+                    >
+                    {{ ingredient.name }} - {{ ingredient.amount }}
+                </li>
+            </ul>
         </div>
     </div>
 </div>

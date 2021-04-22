@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -9,14 +10,26 @@ import { Recipe } from '../recipe.model';
 export class RecipeDetailComponent implements OnInit {
 
   @Input() recipe ?: Recipe;
-  view= false;
-  viewDropdown(){
-    this.view = !this.view;
-  }
   
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
   }
+
+  onChange(event:any){
+    if(event.target.value === 'To Shopping List')
+    this.onAddToShoppingList();
+  }
+
+  onAddToShoppingList() {
+
+    console.log('outside addtoShoppingList');
+    if(this.recipe){
+      console.log('inside addtoShoppingList');
+      
+      this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    }
+  }
+
 
 }
