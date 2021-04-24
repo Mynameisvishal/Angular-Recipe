@@ -1,5 +1,8 @@
-<a href="#" *ngIf="recipe" class="list-group-item clearfix"
-(click)="onSelected()">
+<a style="cursor: pointer;"
+    [routerLink]="[index]"
+    routerLinkActive="active"
+ *ngIf="recipe" class="list-group-item clearfix"
+>
     <div class="d-flex">
         <img src="{{recipe.imagePath}}" style="height: 70px;margin-top: 16px !important;" class="img-responsive" alt="{{recipe.name}}">
         <div class="card-body">
